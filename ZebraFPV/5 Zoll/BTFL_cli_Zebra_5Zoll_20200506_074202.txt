@@ -1,0 +1,230 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / DALRCF405 (DLF4) 4.0.5 Aug  1 2019 / 11:45:14 (839661b20) MSP API: 1.41
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name DALRCF405
+manufacturer_id 
+mcu_id 00510048374d501520393947
+signature 
+
+# name
+name Zebra_5Zoll
+
+# resources
+
+# timer
+
+# dma
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature LED_STRIP
+feature OSD
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# beacon
+
+# map
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 4 2048 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 900 1300 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 5 1700 2100 0 0
+aux 4 19 4 1700 2100 0 0
+aux 5 30 3 1700 2100 0 0
+aux 6 35 2 1700 2100 0 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+rxfail 5 s 2000
+rxfail 6 s 1000
+rxfail 7 h
+rxfail 8 s 1000
+rxfail 9 s 2000
+
+# display_name
+
+# master
+set gyro_lowpass_type = PT1
+set gyro_lowpass_hz = 0
+set gyro_lowpass2_hz = 200
+set dyn_notch_min_hz = 80
+set dyn_lpf_gyro_min_hz = 0
+set dyn_lpf_gyro_max_hz = 0
+set acc_trim_pitch = -2
+set acc_trim_roll = 4
+set mag_hardware = NONE
+set max_check = 1950
+set rssi_channel = 14
+set fpv_mix_degrees = 32
+set serialrx_provider = IBUS
+set motor_pwm_protocol = DSHOT600
+set failsafe_delay = 30
+set failsafe_throttle_low_delay = 10
+set vbat_min_cell_voltage = 335
+set vbat_warning_cell_voltage = 340
+set small_angle = 180
+set pid_process_denom = 1
+set osd_vbat_pos = 2498
+set osd_rssi_pos = 2434
+set osd_tim_1_pos = 2518
+set osd_tim_2_pos = 2486
+set osd_flymode_pos = 2082
+set osd_vtx_channel_pos = 2101
+set osd_current_pos = 2454
+set osd_mah_drawn_pos = 2508
+set osd_craft_name_pos = 458
+set osd_warnings_pos = 14730
+set osd_avg_cell_voltage_pos = 2466
+set osd_disarmed_pos = 2411
+set osd_flip_arrow_pos = 2286
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_endbatt = ON
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_max_esc_temp = ON
+set vtx_band = 5
+set vtx_power = 4
+set vtx_freq = 5658
+
+# profile
+profile 0
+
+set dyn_lpf_dterm_min_hz = 80
+set dyn_lpf_dterm_max_hz = 175
+set dterm_lowpass_hz = 0
+set dterm_lowpass2_hz = 0
+set vbat_pid_gain = ON
+set anti_gravity_gain = 10000
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 10
+set pidsum_limit = 1000
+set p_pitch = 60
+set d_pitch = 60
+set f_pitch = 350
+set p_roll = 65
+set d_roll = 65
+set f_roll = 325
+set p_yaw = 100
+set f_yaw = 125
+set d_min_roll = 45
+set d_min_pitch = 45
+set d_min_boost_gain = 30
+set d_min_advance = 0
+
+# profile
+profile 1
+
+set dyn_lpf_dterm_min_hz = 0
+set dyn_lpf_dterm_max_hz = 0
+set dterm_lowpass_type = PT1
+set dterm_lowpass_hz = 0
+set dterm_lowpass2_hz = 125
+set vbat_pid_gain = ON
+set anti_gravity_gain = 10000
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 10
+set pidsum_limit = 1000
+set p_pitch = 60
+set d_pitch = 60
+set f_pitch = 350
+set p_roll = 65
+set d_roll = 65
+set f_roll = 325
+set p_yaw = 100
+set f_yaw = 125
+set d_min_roll = 45
+set d_min_pitch = 45
+set d_min_boost_gain = 30
+set d_min_advance = 0
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set tpa_rate = 80
+set tpa_breakpoint = 1750
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
