@@ -1,0 +1,200 @@
+# diff all
+
+# version
+# Betaflight / CRAZYBEEF4FS (C4FS) 4.0.2 May  5 2019 / 11:43:44 (56bdc8d26) MSP API: 1.41
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4FS
+manufacturer_id 
+mcu_id 003d00373237511630353639
+signature 
+
+# name
+name TIM_TRASH
+
+# resources
+resource PWM 1 D07
+resource PWM 3 D11
+resource PWM 5 D10
+resource PWM 6 A11
+resource PWM 7 F08
+
+# timer
+
+# dma
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -AIRMODE
+feature -ANTI_GRAVITY
+feature -DYNAMIC_FILTER
+feature INFLIGHT_ACC_CAL
+feature MOTOR_STOP
+feature LED_STRIP
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -DISARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ON_USB
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+
+# serial
+serial 0 2048 115200 57600 0 115200
+
+# led
+led 0 4,7::CO:2
+led 1 5,7::CO:4
+led 2 6,7::CO:5
+led 3 7,7::CO:3
+led 4 8,7::CO:13
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 2 1925 2100 0 0
+aux 1 1 4 900 1050 0 0
+aux 2 2 4 1400 1575 0 0
+aux 3 13 0 1600 2025 0 0
+aux 4 28 5 900 1300 0 0
+aux 5 35 3 1550 2100 0 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+rxfail 4 s 2000
+rxfail 7 s 1000
+rxfail 8 s 1000
+rxfail 9 s 1000
+
+# display_name
+
+# master
+set acc_trim_pitch = -32
+set acc_trim_roll = -12
+set acc_calibration = -209,30,47
+set motor_pwm_protocol = DSHOT600
+set failsafe_delay = 20
+set vbat_max_cell_voltage = 420
+set vbat_min_cell_voltage = 280
+set vbat_warning_cell_voltage = 300
+set ibata_scale = 1175
+set beeper_dshot_beacon_tone = 4
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 1
+set osd_warn_esc_fail = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_vbat_pos = 14377
+set osd_rssi_pos = 14370
+set osd_tim_1_pos = 14390
+set osd_tim_2_pos = 86
+set osd_flymode_pos = 14744
+set osd_g_force_pos = 65
+set osd_throttle_pos = 375
+set osd_crosshairs_pos = 4269
+set osd_ah_sbar_pos = 4270
+set osd_ah_pos = 4142
+set osd_current_pos = 6496
+set osd_mah_drawn_pos = 14721
+set osd_craft_name_pos = 14730
+set osd_warnings_pos = 14697
+set osd_avg_cell_voltage_pos = 6519
+set osd_disarmed_pos = 14634
+set osd_core_temp_pos = 375
+set osd_stat_tim_1 = ON
+set osd_stat_tim_2 = OFF
+set osd_stat_battery = ON
+set osd_stat_flight_dist = ON
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 3
+set vtx_freq = 5917
+set flysky_spi_tx_id = -994720222
+set flysky_spi_rf_channels = 109,29,43,120,70,89,126,96,63,116,34,59,81,103,53,23
+
+# profile
+profile 0
+
+set d_pitch = 30
+set p_roll = 50
+set d_roll = 27
+set p_yaw = 72
+set i_yaw = 55
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set roll_rc_rate = 120
+set pitch_rc_rate = 120
+set yaw_rc_rate = 130
+set roll_expo = 23
+set pitch_expo = 23
+set roll_srate = 75
+set pitch_srate = 75
+set yaw_srate = 80
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
