@@ -1,0 +1,210 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.2.8 Feb 15 2021 / 12:08:36 (101738d8e) MSP API: 1.43
+# config: manufacturer_id: DALR, board_name: DALRCF405, version: 6b1b9bea, date: 2020-05-16T15:58:54Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name DALRCF405
+manufacturer_id DALR
+mcu_id 00510048374d501520393947
+signature 
+
+# name: ZebraCopter
+
+# feature
+feature GPS
+feature LED_STRIP
+
+# beeper
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_LOW
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 2 2 115200 57600 0 115200
+serial 3 1 115200 57600 0 115200
+serial 4 2048 115200 57600 0 115200
+
+# led
+led 0 11,11::L:0
+led 1 12,11::L:0
+led 2 13,11::L:0
+led 3 14,11::CW:0
+led 4 15,11::CI:0
+led 5 2,11::L:0
+led 6 3,11::L:0
+led 7 4,11::L:0
+led 8 1,11::CW:0
+led 9 0,11::CI:0
+
+# aux
+aux 0 0 0 900 1300 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 46 3 1700 2100 0 0
+aux 4 13 5 1700 2100 0 0
+aux 5 15 5 1500 1700 0 0
+aux 6 15 5 1100 1300 0 0
+aux 7 35 2 1700 2100 0 0
+aux 8 37 5 1300 1500 0 0
+
+# adjrange
+adjrange 0 0 4 900 2100 29 4 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 14 20 26 30
+vtxtable powerlabels 4 3 2 1
+
+# rxfail
+rxfail 5 s 2000
+rxfail 6 s 1500
+rxfail 7 s 2000
+rxfail 8 h
+rxfail 9 s 2000
+
+# master
+set gyro_lowpass2_hz = 500
+set dyn_lpf_gyro_min_hz = 400
+set dyn_lpf_gyro_max_hz = 1000
+set acc_calibration = 13,-91,54,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set rssi_channel = 14
+set rc_smoothing_derivative_type = PT1
+set fpv_mix_degrees = 32
+set serialrx_provider = IBUS
+set blackbox_device = SERIAL
+set motor_pwm_protocol = DSHOT300
+set failsafe_delay = 30
+set failsafe_throttle_low_delay = 10
+set failsafe_procedure = GPS-RESCUE
+set vbat_min_cell_voltage = 340
+set vbat_warning_cell_voltage = 353
+set yaw_motors_reversed = ON
+set gps_provider = UBLOX
+set gps_sbas_mode = AUTO
+set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
+set gps_rescue_angle = 40
+set gps_rescue_sanity_checks = RESCUE_SANITY_OFF
+set gps_rescue_min_sats = 5
+set gps_rescue_allow_arming_without_fix = ON
+set pid_process_denom = 2
+set osd_vbat_pos = 450
+set osd_rssi_pos = 14722
+set osd_tim_1_pos = 6614
+set osd_tim_2_pos = 6582
+set osd_flymode_pos = 6178
+set osd_vtx_channel_pos = 6197
+set osd_current_pos = 6550
+set osd_mah_drawn_pos = 6605
+set osd_craft_name_pos = 458
+set osd_gps_speed_pos = 4226
+set osd_gps_lon_pos = 4130
+set osd_gps_lat_pos = 4162
+set osd_gps_sats_pos = 4184
+set osd_home_dir_pos = 4526
+set osd_home_dist_pos = 458
+set osd_altitude_pos = 4194
+set osd_warnings_pos = 14730
+set osd_avg_cell_voltage_pos = 14754
+set osd_disarmed_pos = 6507
+set osd_flip_arrow_pos = 14574
+set osd_pid_profile_name_pos = 6594
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_endbatt = ON
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_max_esc_temp = ON
+set osd_profile = 2
+set vtx_band = 5
+set vtx_channel = 7
+set vtx_power = 1
+set vtx_freq = 5880
+set gyro_rpm_notch_q = 800
+set name = ZebraCopter
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dyn_lpf_dterm_curve_expo = 6
+set dterm_lowpass2_hz = 300
+set vbat_sag_compensation = 100
+set feedforward_transition = 40
+set iterm_relax_cutoff = 10
+set yaw_lowpass_hz = 70
+set throttle_boost_cutoff = 10
+set p_pitch = 55
+set i_pitch = 108
+set d_pitch = 46
+set f_pitch = 114
+set p_roll = 50
+set i_roll = 102
+set d_roll = 42
+set f_roll = 108
+set p_yaw = 54
+set i_yaw = 108
+set f_yaw = 108
+set d_min_roll = 28
+set d_min_pitch = 30
+set ff_interpolate_sp = AVERAGED_3
+set ff_spike_limit = 55
+set ff_smooth_factor = 40
+set ff_boost = 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
